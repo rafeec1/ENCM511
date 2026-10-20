@@ -93,13 +93,13 @@ void App_Status(const App *app, char text[64])
 {
     char *p = text;
     p = Append(p, app->mode == MODE_FAST ? "Fast Mode: " : "Prog Mode: ");
-    if (app->state == STATE_IDLE) p = Append(p, "IDLE");
+    if (app->state == STATE_IDLE) p = Append(p, "IDLE              ");
     else if (app->state == STATE_TWO_BUTTONS) {
         p = Append(p, "PB");
         *p++ = (app->pair_mask == 6u) ? '1' : '0';
         p = Append(p, " and PB");
         *p++ = (app->pair_mask == 3u) ? '1' : '2';
-        p = Append(p, " are pressed");
+        p = Append(p, " are pressed                 ");
     } else if (app->mode == MODE_PROG && app->state == STATE_PB2) {
         p = Append(p, "Blink setting = ");
         *p++ = (char)('0' + app->edit_setting);
@@ -107,7 +107,7 @@ void App_Status(const App *app, char text[64])
         p = Append(p, "PB");
         *p++ = app->state == STATE_PB0 ? '0' :
                app->state == STATE_PB1 ? '1' : '2';
-        p = Append(p, " was pressed");
+        p = Append(p, " was pressed                 ");
         if (app->mode == MODE_PROG && app->state == STATE_PB1) {
             p = Append(p, ", Setting = ");
             *p++ = (char)('0' + app->saved_setting);
