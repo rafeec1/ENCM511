@@ -1,10 +1,8 @@
-/* ENCM 511 Assignment 3, first draft, 2026-10-13.
- * Group members: (insert names and UCIDs)
- * Hardware-independent state machine. All functions run in main, never an ISR.
- * Unspecified cases: different single buttons are ignored while active;
- * two buttons override any fast state, but do nothing in prog;
- * three buttons change mode only from idle. See README.md.
- */
+// ENCM 511 Assignment 3
+// Group members: Arslan Sheriff Amjath (30181510), Sudeep Mann (30173100), 
+//                Rafee Chowdhury (30244011). Date: 2026-10-13
+// Hardware-independent state machine. All functions run in main
+
 #include "app.h"
 
 void App_Init(App *app)
@@ -83,8 +81,8 @@ uint8_t App_SteadyOn(const App *app)
     return app->mode == MODE_FAST && app->state == STATE_TWO_BUTTONS;
 }
 
-/* Tiny string builder: no printf, strlen, or string library. Known messages
- * are shorter than 64 characters including the terminator. */
+// Tiny string builder: no printf, strlen, or string library. Known messages
+// are shorter than 64 characters including the terminator
 static char *Append(char *out, const char *in)
 {
     while (*in != '\0') *out++ = *in++;

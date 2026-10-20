@@ -19,11 +19,11 @@ typedef struct {
 } App;
 
 void App_Init(App *app);
-/* One completed single click OR one recognized multi-button gesture.
- * Returns 1 only if state/output has changed. */
+// One completed single click OR one recognized multi-button gesture
+// Returns 1 only if state/output has changed
 uint8_t App_ButtonEvent(App *app, uint8_t mask);
 uint8_t App_Character(App *app, char c);
-uint16_t App_BlinkInterval(const App *app); /* milliseconds, 0 = no blink */
+uint16_t App_BlinkInterval(const App *app); // milliseconds, 0 = no blink
 uint8_t App_SteadyOn(const App *app);
 void App_Status(const App *app, char text[64]);
 #endif

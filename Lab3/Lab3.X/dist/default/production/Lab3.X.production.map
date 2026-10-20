@@ -91,10 +91,10 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x266           0x399  (921)
 .const                       0x366                0x66            0x99  (153)
-.text                        0x3cc               0x778           0xb34  (2868)
-.dinit                       0xb44                0x14            0x1e  (30)
+.text                        0x3cc               0x76a           0xb1f  (2847)
+.dinit                       0xb36                0x14            0x1e  (30)
 
-                 Total "program" memory used (bytes):          0xf84  (3972) 1%
+                 Total "program" memory used (bytes):          0xf6f  (3951) 1%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -140,8 +140,8 @@ External Symbols in Program Memory (by address):
                   0x00077a                  _UART2_ReadChar
                   0x0007a4                  _UART2_TryLine
                   0x000892                  _main
-                  0x000a18                  _Buttons_Init
-                  0x000a3e                  _Buttons_Update
+                  0x000a0a                  _Buttons_Init
+                  0x000a30                  _Buttons_Update
                   0x02af00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
@@ -152,8 +152,8 @@ External Symbols in Program Memory (by name):
                   0x0003cc                  _App_Init
                   0x0005ea                  _App_Status
                   0x0005a4                  _App_SteadyOn
-                  0x000a18                  _Buttons_Init
-                  0x000a3e                  _Buttons_Update
+                  0x000a0a                  _Buttons_Init
+                  0x000a30                  _Buttons_Update
                   0x0006ee                  _InitUART2
                   0x00077a                  _UART2_ReadChar
                   0x0007a4                  _UART2_TryLine
@@ -281,12 +281,12 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x312b
+.debug_info       0x000000       0x3d84
  *(.debug_info)
  .debug_info      0x000000        0xfb9 build/default/production/uart.o
  .debug_info      0x000fb9        0x470 build/default/production/app.o
  .debug_info      0x001429        0x28e build/default/production/buttons.o
- .debug_info      0x0016b7       0x1a74 build/default/production/main.o
+ .debug_info      0x0016b7       0x26cd build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x4b2
@@ -299,9 +299,9 @@ __FDEVOPT1
 .debug_line       0x000000        0x4a2
  *(.debug_line)
  .debug_line      0x000000        0x16f build/default/production/uart.o
- .debug_line      0x00016f         0xea build/default/production/app.o
- .debug_line      0x000259         0xb7 build/default/production/buttons.o
- .debug_line      0x000310        0x192 build/default/production/main.o
+ .debug_line      0x00016f         0xe8 build/default/production/app.o
+ .debug_line      0x000257         0xb7 build/default/production/buttons.o
+ .debug_line      0x00030e        0x194 build/default/production/main.o
 
 .debug_frame      0x000000        0x276
  *(.debug_frame)
@@ -310,10 +310,10 @@ __FDEVOPT1
  .debug_frame     0x00017c         0x48 build/default/production/buttons.o
  .debug_frame     0x0001c4         0xb2 build/default/production/main.o
 
-.debug_str        0x000000         0xd5
+.debug_str        0x000000        0x127
  *(.debug_str)
  .debug_str       0x000000         0x59 build/default/production/uart.o
- .debug_str       0x000059         0x7c build/default/production/main.o
+ .debug_str       0x000059         0xce build/default/production/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -1694,7 +1694,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000060        0x396
+                  0x000060        0x492
  .debug_pubtypes
                   0x000060        0x140 build/default/production/uart.o
  .debug_pubtypes
@@ -1702,22 +1702,22 @@ LOAD data_init
  .debug_pubtypes
                   0x0001e6         0x37 build/default/production/buttons.o
  .debug_pubtypes
-                  0x00021d        0x1d9 build/default/production/main.o
+                  0x00021d        0x2d5 build/default/production/main.o
 
 __c30_signature
-                  0x0003f6         0x24
+                  0x0004f2         0x24
  __c30_signature
-                  0x0003f6          0x6 build/default/production/uart.o
+                  0x0004f2          0x6 build/default/production/uart.o
  __c30_signature
-                  0x0003fc          0x6 build/default/production/app.o
+                  0x0004f8          0x6 build/default/production/app.o
  __c30_signature
-                  0x000402          0x6 build/default/production/buttons.o
+                  0x0004fe          0x6 build/default/production/buttons.o
  __c30_signature
-                  0x000408          0x6 build/default/production/main.o
+                  0x000504          0x6 build/default/production/main.o
  __c30_signature
-                  0x00040e          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
+                  0x00050a          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
  __c30_signature
-                  0x000414          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+                  0x000510          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
 
 .nbss               0x0800         0x12
  .nbss              0x0800          0xa build/default/production/main.o
@@ -1775,7 +1775,7 @@ __c30_signature
 .const              0x8366         0x66 load address 0x000366  
  .const             0x8366         0x66 build/default/production/app.o
 
-.text             0x0003cc        0x778
+.text             0x0003cc        0x76a
  .text            0x0003cc        0x322 build/default/production/app.o
                   0x0003cc                  _App_Init
                   0x0003f2                  _App_ButtonEvent
@@ -1787,11 +1787,11 @@ __c30_signature
                   0x0006ee                  _InitUART2
                   0x00077a                  _UART2_ReadChar
                   0x0007a4                  _UART2_TryLine
- .text            0x000892        0x186 build/default/production/main.o
+ .text            0x000892        0x178 build/default/production/main.o
                   0x000892                  _main
- .text            0x000a18        0x12c build/default/production/buttons.o
-                  0x000a18                  _Buttons_Init
-                  0x000a3e                  _Buttons_Update
+ .text            0x000a0a        0x12c build/default/production/buttons.o
+                  0x000a0a                  _Buttons_Init
+                  0x000a30                  _Buttons_Update
 
-.dinit            0x000b44         0x14
- .dinit           0x000b44         0x14 data_init
+.dinit            0x000b36         0x14
+ .dinit           0x000b36         0x14 data_init
